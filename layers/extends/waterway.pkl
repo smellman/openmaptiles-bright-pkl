@@ -1,0 +1,5 @@
+open module waterway
+extends "openmaptiles.pkl"
+
+type = "line"
+`source-layer` = "waterway"

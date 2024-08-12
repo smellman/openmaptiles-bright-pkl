@@ -1,0 +1,28 @@
+extends "extends/landuse.pkl"
+
+id = "landuse-residential"
+filter {
+    "all"
+    new {
+        "in"
+        "class"
+        "residential"
+        "suburb"
+        "neighbourhood"
+    }
+}
+paint {
+    `fill-color` {
+        base = 1
+        stops {
+            new {
+                12
+                "hsla(30, 19%, 90%, 0.4)"
+            }
+            new {
+                16
+                "hsla(30, 19%, 90%, 0.2)"
+            }
+        }
+    }
+}

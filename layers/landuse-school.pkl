@@ -1,0 +1,11 @@
+extends "extends/landuse.pkl"
+
+id = "landuse-school"
+filter {
+    "=="
+    "class"
+    "school"
+}
+paint {
+    `fill-color` = "#f0e8f8"
+}

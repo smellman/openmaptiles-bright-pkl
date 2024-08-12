@@ -1,0 +1,12 @@
+extends "extends/landcover.pkl"
+
+id = "landcover-grass"
+filter {
+    "=="
+    "class"
+    "grass"
+}
+paint {
+    `fill-color` = "#ff0000"
+    `fill-opacity` = 1
+}

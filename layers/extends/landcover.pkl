@@ -1,0 +1,5 @@
+open module landcover
+extends "openmaptiles.pkl"
+
+type = "fill"
+`source-layer` = "landcover"

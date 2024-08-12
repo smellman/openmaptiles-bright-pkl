@@ -1,0 +1,16 @@
+extends "waterway-stream-canal.pkl"
+
+id = "waterway-stream-canal-intermittent"
+filter {
+    [3] = new {
+        "=="
+        "intermittent"
+        1
+    }
+}
+paint {
+    `line-dasharray` {
+        4
+        3
+    }
+}

@@ -1,0 +1,26 @@
+module layers
+
+layers = new Listing {
+    import("layers/background.pkl")
+    import("layers/landcover-glacier.pkl")
+    import("layers/landuse-residential.pkl")
+    import("layers/landuse-commercial.pkl")
+    import("layers/landuse-industrial.pkl")
+    import("layers/landuse-cemetery.pkl")
+    import("layers/landuse-hospital.pkl")
+    import("layers/landuse-school.pkl")
+    import("layers/landuse-railway.pkl")
+    import("layers/landcover-wood.pkl")
+    import("layers/landcover-grass.pkl")
+    import("layers/landcover-grass-park.pkl")
+    import("layers/waterway-tunnel.pkl")
+    import("layers/waterway-other.pkl")
+    import("layers/waterway-other-intermittent.pkl")
+    import("layers/waterway-stream-canal.pkl")
+    import("layers/waterway-stream-canal-intermittent.pkl")
+    import("layers/waterway-river.pkl")
+    import("layers/waterway-river-intermittent.pkl")
+    import("layers/water-offset.pkl")
+    import("layers/water.pkl")
+    import("layers/water-intermittent.pkl")
+}

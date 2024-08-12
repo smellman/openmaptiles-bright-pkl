@@ -1,0 +1,11 @@
+extends "extends/landuse.pkl"
+
+id = "landuse-hospital"
+filter {
+    "=="
+    "class"
+    "hospital"
+}
+paint {
+    `fill-color` = "#fde"
+}

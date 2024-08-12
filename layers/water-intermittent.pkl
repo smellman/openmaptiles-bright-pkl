@@ -1,0 +1,13 @@
+extends "water.pkl"
+
+id = "water-intermittent"
+filter {
+    [1] = new {
+        "=="
+        "intermittent"
+        1
+    }
+}
+paint {
+    `fill-opacity` = 0.7
+}

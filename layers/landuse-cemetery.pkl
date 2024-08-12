@@ -1,0 +1,11 @@
+extends "extends/landuse.pkl"
+
+id = "landuse-cemetery"
+filter {
+    "=="
+    "class"
+    "cemetery"
+}
+paint {
+    `fill-color` = "#e0e4dd"
+}

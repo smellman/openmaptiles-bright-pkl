@@ -1,0 +1,8 @@
+version = 8
+name = "Bright"
+center = new Listing {0 0}
+zoom = 0
+sources = import("sources.pkl")
+sprite = import("sprite.pkl").sprite
+glyphs = import("glyphs.pkl").glyphs
+layers = import("layers.pkl").layers

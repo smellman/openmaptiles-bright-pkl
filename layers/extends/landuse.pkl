@@ -1,0 +1,5 @@
+open module landuse
+extends "openmaptiles.pkl"
+
+type = "fill"
+`source-layer` = "landuse"

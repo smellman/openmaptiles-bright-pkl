@@ -1,0 +1,5 @@
+open module water
+extends "openmaptiles.pkl"
+
+type = "fill"
+`source-layer` = "water"

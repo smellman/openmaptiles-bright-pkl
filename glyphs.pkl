@@ -1,0 +1,2 @@
+module glyphs
+glyphs = "https://tile.openstreetmap.jp/fonts/{fontstack}/{range}.pbf"

@@ -1,0 +1,3 @@
+open module openmaptiles
+
+source = "openmaptiles"

@@ -1,0 +1,19 @@
+extends "extends/landuse.pkl"
+
+id = "landuse-industrial"
+filter {
+    "all"
+    new {
+        "=="
+        "$type"
+        "Polygon"
+    }
+    new {
+        "=="
+        "class"
+        "industrial"
+    }
+}
+paint {
+    `fill-color` = "hsla(49, 100%, 88%, 0.34)"
+}

@@ -1,0 +1,18 @@
+open module water
+extends "extends/water.pkl"
+
+id = "water"
+filter {
+    "all"
+    new {
+        "!="
+        "intermittent"
+        1
+    }
+}
+layout {
+    visibility = "visible"
+}
+paint {
+    `fill-color` = "hsl(210, 67%, 85%)"
+}

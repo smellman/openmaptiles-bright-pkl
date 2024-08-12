@@ -1,0 +1,2 @@
+module sprite
+sprite = "https://tile.openstreetmap.jp/styles/osm-bright/sprite"

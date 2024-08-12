@@ -1,0 +1,6 @@
+import "variables.pkl" as variables
+id = "background"
+type = "background"
+paint {
+    `background-color` = variables.background_color
+}

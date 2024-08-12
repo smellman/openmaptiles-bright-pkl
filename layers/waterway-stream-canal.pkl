@@ -1,0 +1,43 @@
+open module `waterway-stream-canal`
+extends "extends/waterway.pkl"
+
+id = "waterway-stream-canale"
+filter {
+    "all"
+    new {
+        "in"
+        "class"
+        "canal"
+        "stream"
+    }
+    new {
+        "!="
+        "brunnel"
+        "tunnel"
+    }
+    new {
+        "=="
+        "intermittent"
+        0
+    }
+}
+layout {
+    `line-cap` = "round"
+    visibility = "visible"
+}
+paint {
+    `line-color` = "#a0c8f0"
+    `line-width` {
+        base = 1.3
+        stops {
+            new {
+                13
+                0.5
+            }
+            new {
+                20
+                6
+            }
+        }
+    }
+}
