@@ -2,11 +2,9 @@ extends "extends/landcover.pkl"
 
 id = "landcover-glacier"
 filter {
-    new {
-        "=="
-        "subclass"
-        "glacier"
-    }
+    "=="
+    "subclass"
+    "glacier"
 }
 layout {
     visibility = "visible"

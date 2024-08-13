@@ -1,5 +1,6 @@
 extends "extends/landcover.pkl"
 
+id = "landcover-wood"
 filter {
     "=="
     "class"
@@ -11,11 +12,11 @@ paint {
         stops {
             new {
                 0
-                "false"
+                false
             }
             new {
                 9
-                "true"
+                true
             }
         }
     }
