@@ -1,0 +1,23 @@
+extends "extends/transportation-line.pkl"
+
+id = "ferry"
+filter {
+    "all"
+    new {
+        "in"
+        "class"
+        "ferry"
+    }
+}
+layout {
+    `line-join` = "round"
+    visibility = "visible"
+}
+paint {
+    `line-color` = "rgba(108, 159, 182, 1)"
+    `line-dasharray`{
+        2
+        2
+    }
+    `line-width` = 1.1
+}

@@ -39,4 +39,5 @@ layers = new Listing {
     import("layers/tunnel-trunk-primary.pkl")
     import("layers/tunnel-motorway.pkl")
     import("layers/tunnel-railway.pkl")
+    import("layers/ferry.pkl")
 }

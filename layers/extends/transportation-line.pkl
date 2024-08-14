@@ -1,4 +1,4 @@
-open module tunnel
+open module `transportation-line`
 extends "openmaptiles.pkl"
 
 type = "line"

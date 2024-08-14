@@ -1,4 +1,4 @@
-extends "extends/tunnel.pkl"
+extends "extends/transportation-line.pkl"
 
 id = "tunnel-service-track"
 filter {
