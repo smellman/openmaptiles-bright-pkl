@@ -1,0 +1,40 @@
+extends "extends/tunnel.pkl"
+
+id = "tunnel-service-track"
+filter {
+    "all"
+    new {
+        "=="
+        "brunnel"
+        "tunnel"
+    }
+    new {
+        "in"
+        "class"
+        "service"
+        "track"
+    }
+}
+layout {
+    `line-join` = "round"
+}
+paint {
+    `line-color` = "#fff"
+    `line-width` {
+        base = 1.2
+        stops {
+            new {
+                15.5
+                0
+            }
+            new {
+                16
+                2
+            }
+            new {
+                20
+                7.5
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+open module building
+extends "openmaptiles.pkl"
+
+type = "fill"
+`source-layer` = "building"

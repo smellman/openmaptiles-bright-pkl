@@ -1,0 +1,40 @@
+extends "extends/tunnel.pkl"
+
+id = "tunnel-railway"
+filter {
+    "all"
+    new {
+        "=="
+        "brunnel"
+        "tunnel"
+    }
+    new {
+        "=="
+        "class"
+        "rail"
+    }
+}
+paint {
+    `line-color` = "#bbb"
+    `line-dasharray` {
+        2
+        2
+    }
+    `line-width` {
+        base = 1.4
+        stops {
+            new {
+                14
+                0.4
+            }
+            new {
+                15
+                0.75
+            }
+            new {
+                20
+                2
+            }
+        }
+    }
+}

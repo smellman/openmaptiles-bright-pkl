@@ -1,0 +1,42 @@
+extends "extends/building.pkl"
+
+id = "building-top"
+layout {
+    visibility = "visible"
+}
+paint {
+    `fill-color` = "#f2eae2"
+    `fill-opacity` {
+        base = 1
+        stops {
+            new {
+                13
+                0
+            }
+            new {
+                16
+                1
+            }
+        }
+    }
+    `fill-outline-color` = "#dfdbd7"
+    `fill-translate` {
+        base = 1
+        stops {
+            new {
+                14
+                new {
+                    0
+                    0
+                }
+            }
+            new {
+                16
+                new {
+                    -2
+                    -2
+                }
+            }
+        }
+    }
+}

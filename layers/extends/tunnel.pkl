@@ -1,0 +1,5 @@
+open module tunnel
+extends "openmaptiles.pkl"
+
+type = "line"
+`source-layer` = "transportation"

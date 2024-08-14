@@ -1,0 +1,19 @@
+extends "extends/building.pkl"
+
+id = "building"
+paint {
+    `fill-antialias` = true
+    `fill-color` {
+        base = 1
+        stops {
+            new {
+                15.5
+                "#f2eae2"
+            }
+            new {
+                16
+                "#dfdbd7"
+            }
+        }
+    }
+}

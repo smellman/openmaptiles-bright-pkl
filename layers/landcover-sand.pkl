@@ -1,0 +1,18 @@
+extends "extends/landcover.pkl"
+
+id = "landcover-sand"
+filter {
+    "all"
+    new {
+        "=="
+        "class"
+        "sand"
+    }
+}
+layout {
+    visibility = "visible"
+}
+paint {
+    `fill-color` = "rgba(245, 238, 188, 1)"
+    `fill-opacity` = 1
+}

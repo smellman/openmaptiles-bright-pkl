@@ -1,0 +1,27 @@
+extends "extends/landcover.pkl"
+
+id = "landcover-ice-shelf"
+filter {
+    "=="
+    "subclass"
+    "ice_shelf"
+}
+layout {
+    visibility = "visible"
+}
+paint {
+    `fill-color` = "#fff"
+    `fill-opacity` {
+        base = 1
+        stops {
+            new {
+                0
+                0.9
+            }
+            new {
+                10
+                0.3
+            }
+        }
+    }
+}
