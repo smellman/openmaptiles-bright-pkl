@@ -18,6 +18,12 @@ To validate the style, you can run the following command:
 pkl eval -f json style.pkl | gl-style-validate
 ```
 
+Or zsh:
+
+```zsh
+gl-style-validate <(pkl eval -f json style.pkl)
+```
+
 Also you need install 'gl-style-validate' command:
 
 ```bash
