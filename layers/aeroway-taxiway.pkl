@@ -1,0 +1,51 @@
+extends "extends/aeroway.pkl"
+
+id = "aeroway-taxiway"
+minzoom = 4
+filter {
+    "all"
+    new {
+        "in"
+        "class"
+        "taxiway"
+    }
+    new {
+        "=="
+        "$type"
+        "LineString"
+    }
+}
+layout {
+    `line-cap` = "round"
+    `line-join` = "round"
+    visibility = "visible"
+}
+paint {
+    `line-color` = "rgba(255, 255, 255, 1)"
+    `line-opacity` {
+        base = 1
+        stops {
+            new {
+                11
+                0
+            }
+            new {
+                12
+                1
+            }
+        }
+    }
+    `line-width` {
+        base = 1.5
+        stops {
+            new {
+                11
+                1
+            }
+            new {
+                17
+                10
+            }
+        }
+    }
+}

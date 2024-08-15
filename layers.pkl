@@ -40,4 +40,9 @@ layers = new Listing {
     import("layers/tunnel-motorway.pkl")
     import("layers/tunnel-railway.pkl")
     import("layers/ferry.pkl")
+    import("layers/aeroway-taxiway-casing.pkl")
+    import("layers/aeroway-runway-casing.pkl")
+    import("layers/aeroway-area.pkl")
+    import("layers/aeroway-taxiway.pkl")
+    import("layers/aeroway-runway.pkl")
 }

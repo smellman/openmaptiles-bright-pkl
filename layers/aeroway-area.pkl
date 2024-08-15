@@ -1,0 +1,38 @@
+extends "extends/aeroway.pkl"
+
+id = "aeroway-area"
+type = "fill"
+minzoom = 4
+filter {
+    "all"
+    new {
+        "=="
+        "$type"
+        "Polygon"
+    }
+    new {
+        "in"
+        "class"
+        "runway"
+        "taxiway"
+    }
+}
+layout {
+    visibility = "visible"
+}
+paint {
+    `fill-color` = "rgba(255, 255, 255, 1)"
+    `fill-opacity` {
+        base = 1
+        stops {
+            new {
+                13
+                0
+            }
+            new {
+                14
+                1
+            }
+        }
+    }
+}

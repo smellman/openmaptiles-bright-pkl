@@ -1,0 +1,5 @@
+open module aeroway
+extends "openmaptiles.pkl"
+
+`source-layer` = "aeroway"
+type = "line"
