@@ -1,4 +1,4 @@
-open module `transportation-line`
+open module transportation
 extends "openmaptiles.pkl"
 
 type = "line"

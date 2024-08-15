@@ -1,0 +1,24 @@
+extends "extends/transportation.pkl"
+
+id = "road-area-pier"
+type = "fill"
+filter {
+    "all"
+    new {
+        "=="
+        "$type"
+        "Polygon"
+    }
+    new {
+        "=="
+        "class"
+        "pier"
+    }
+}
+layout {
+    visibility = "visible"
+}
+paint {
+    `fill-antialias` = true
+    `fill-color` = "#f8f4f0"
+}

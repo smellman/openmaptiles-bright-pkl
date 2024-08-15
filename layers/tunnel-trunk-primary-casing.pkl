@@ -1,4 +1,4 @@
-extends "extends/transportation-line.pkl"
+extends "extends/transportation.pkl"
 
 id = "tunnel-trunk-primary-casing"
 filter {

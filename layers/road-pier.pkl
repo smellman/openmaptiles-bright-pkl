@@ -1,36 +1,35 @@
 extends "extends/transportation.pkl"
 
-id = "tunnel-secondary-tertiary-casing"
+id = "road-pier"
 filter {
     "all"
     new {
         "=="
-        "brunnel"
-        "tunnel"
+        "$type"
+        "LineString"
     }
     new {
         "in"
         "class"
-        "secondary"
-        "tertiary"
+        "pier"
     }
 }
 layout {
+    `line-cap` = "round"
     `line-join` = "round"
 }
 paint {
-    `line-color` = "#e9ac77"
-    `line-opacity` = 1
+    `line-color` = "#f8f4f0"
     `line-width` {
         base = 1.2
         stops {
             new {
-                8
-                1.5
+                15
+                1
             }
             new {
-                20
                 17
+                4
             }
         }
     }
