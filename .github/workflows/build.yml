@@ -1,7 +1,7 @@
 name: validate and build style
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
