@@ -2,10 +2,10 @@ name: Github Pages Deploy
 
 on:
   workflow_dispatch:
-  inputs:
-    validation-status:
-      description: 'Validation status'
-      required: true
+    inputs:
+      validation-status:
+        description: 'Validation status'
+        required: true
 
 jobs:
   deploy:
