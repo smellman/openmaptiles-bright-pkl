@@ -47,4 +47,5 @@ layers = new Listing {
     import("layers/aeroway-runway.pkl")
     import("layers/road-area-pier.pkl")
     import("layers/road-pier.pkl")
+    import("layers/highway-area.pkl")
 }
