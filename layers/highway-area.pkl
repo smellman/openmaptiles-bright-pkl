@@ -1,0 +1,26 @@
+extends "extends/transportation.pkl"
+
+id = "highway-area"
+type = "fill"
+filter {
+    "all"
+    new {
+        "=="
+        "$type"
+        "Polygon"
+    }
+    new {
+        "in"
+        "class"
+        "pier"
+    }
+}
+layout {
+    visibility = "visible"
+}
+paint {
+    `fill-antialias` = false
+    `fill-color` = "hsla(0, 0%, 89%, 0.56)"
+    `fill-opacity` = 0.9
+    `fill-outline-color` = "#cfcdca"
+}
