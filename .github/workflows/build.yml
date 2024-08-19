@@ -29,7 +29,7 @@ jobs:
       - name : Validate
         run: |
           pkl eval -f json style.pkl > tmp.style
-          cat tmp.style | gl-style-validate
+          gl-style-validate tmp.style
 
   deploy:
     runs-on: ubuntu-latest
