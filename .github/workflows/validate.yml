@@ -11,27 +11,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
       - name: Setup Pkl language
         run: |
           curl -L -o pkl 'https://github.com/apple/pkl/releases/download/0.26.3/pkl-linux-amd64' || { echo "Failed to download pkl"; exit 1; }
           chmod +x pkl || { echo "Failed to make pkl executable"; exit 1; }
           sudo mv pkl /usr/local/bin/pkl || { echo "Failed to move pkl to /usr/local/bin"; exit 1; }
-
       - name: setup node
         uses: actions/setup-node@v2
         with:
           node-version: '20'
-
       - name: Install dependencies
         run: npm install @maplibre/maplibre-gl-style-spec --global
-
       - name : Validate
         run: pkl eval -f json style.pkl | gl-style-validate
-
       output:
         validation-status: ${{ job.status }}
-      
       - name: Trigger deploy workflow:
         if: success()
         uses: actions/github-script@v6
