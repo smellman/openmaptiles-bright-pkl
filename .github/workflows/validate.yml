@@ -28,3 +28,18 @@ jobs:
 
       - name : Validate
         run: pkl eval -f json style.pkl | gl-style-validate
+
+      output:
+        validation-status: ${{ job.status }}
+      
+      - name: Trigger deploy workflow:
+        if: success()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'deploy.yml',
+              ref: context.ref,
+            })

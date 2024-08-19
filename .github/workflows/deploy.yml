@@ -1,10 +1,11 @@
 name: Github Pages Deploy
 
 on:
-  workflow_run:
-    workflows: ["Validate Pkl Style"]
-    types:
-      - completed
+  workflow_dispatch:
+  inputs:
+    validation-status:
+      description: 'Validation status'
+      required: true
 
 jobs:
   deploy:
