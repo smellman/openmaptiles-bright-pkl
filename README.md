@@ -34,6 +34,16 @@ npm install @maplibre/maplibre-gl-style-spec --global
 
 https://smellman.github.io/openmaptiles-bright-pkl
 
+or run following command:
+
+```bash
+npm install -g serve
+pkl eval -f json style.pkl > style.json
+serve -C -p 3000
+```
+
+then open http://localhost:3000/preview
+
 ## License
 
 The code in this repository is licensed under the BSD 3-Clause License.
