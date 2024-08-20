@@ -1,0 +1,56 @@
+extends "extends/transportation.pkl"
+
+id = "highway-link-casing"
+minzoom = 13
+filter {
+    "all"
+    new {
+        "!in"
+        "brunnel"
+        "bridge"
+        "tunnel"
+    }
+    new {
+        "in"
+        "class"
+        "trunk"
+        "primary"
+        "secondary"
+        "tertiary"
+    }
+    new {
+        "=="
+        "ramp"
+        1
+    }
+}
+layout {
+    `line-cap` = "round"
+    `line-join` = "round"
+    visibility = "visible"
+}
+paint {
+    `line-color` = "#e9ac77"
+    `line-opacity` = 1
+    `line-width` {
+        base = 1.2
+        stops {
+            new {
+                12
+                1
+            }
+            new {
+                13
+                3
+            }
+            new {
+                14
+                4
+            }
+            new {
+                20
+                15
+            }
+        }
+    }
+}
