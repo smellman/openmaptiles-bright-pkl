@@ -55,4 +55,13 @@ layers = new Listing {
     import("layers/highway-secondary-tertiary-casing.pkl")
     import("layers/highway-primary-casing.pkl")
     import("layers/highway-trunk-casing.pkl")
+    import("layers/highway-motorway-casing.pkl")
+    import("layers/highway-path.pkl")
+    import("layers/highway-path-steps.pkl")
+    import("layers/highway-motorway-link.pkl")
+    import("layers/highway-link.pkl")
+    import("layers/highway-minor.pkl")
+    import("layers/highway-secondary-tertiary.pkl")
+    import("layers/highway-primary.pkl")
+    import("layers/highway-trunk.pkl")
 }

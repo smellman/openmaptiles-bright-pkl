@@ -1,0 +1,56 @@
+extends "extends/transportation.pkl"
+
+id = "highway-path-steps"
+filter {
+    "all"
+    new {
+        "=="
+        "$type"
+        "LineString"
+    }
+    new {
+        "!in"
+        "brunnel"
+        "bridge"
+        "tunnel"
+    }
+    new {
+        "=="
+        "class"
+        "path"
+    }
+    new {
+        "=="
+        "subclass"
+        "steps"
+    }
+}
+layout {
+    `line-join` = "bevel"
+    `line-cap` = "butt"
+}
+paint {
+    `line-color` = "#fff"
+    `line-opacity` = 1
+    `line-width` {
+        base = 1.2
+        stops {
+            new {
+                13.5
+                0
+            }
+            new {
+                14
+                1.25
+            }
+            new {
+                20
+                5.75
+            }
+        }
+    }
+    `line-dasharray` {
+        0.5
+        0.25
+    }
+}
