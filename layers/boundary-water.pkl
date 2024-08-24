@@ -1,0 +1,59 @@
+extends "extends/boundary.pkl"
+
+id = "boundary-water"
+minzoom = 4
+filter {
+    "all"
+    new {
+        "in"
+        "admin_level"
+        2
+        4
+    }
+    new {
+        "=="
+        "maritime"
+        1
+    }
+}
+layout {
+    `line-cap` = "round"
+    `line-join` = "round"
+    visibility = "visible"
+}
+paint {
+    `line-color` = "rgba(154, 189, 214, 1)"
+    `line-opacity` {
+        stops {
+            new {
+                6
+                0.6
+            }
+            new {
+                10
+                1
+            }
+        }
+    }
+    `line-width` {
+        base = 1
+        stops {
+            new {
+                0
+                0.6
+            }
+            new {
+                4
+                1.4
+            }
+            new {
+                5
+                2
+            }
+            new {
+                12
+                8
+            }
+        }
+    }
+}

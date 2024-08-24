@@ -1,0 +1,50 @@
+extends "extends/boundary.pkl"
+
+id = "boundary-land-level-2"
+filter {
+    "all"
+    new {
+        "=="
+        "admin_level"
+        2
+    }
+    new {
+        "!="
+        "maritime"
+        1
+    }
+    new {
+        "!="
+        "disputed"
+        1
+    }
+}
+layout {
+    `line-cap` = "round"
+    `line-join` = "round"
+    visibility = "visible"
+}
+paint {
+    `line-color` = "hsl(248, 7%, 66%)"
+    `line-width` {
+        base = 1
+        stops {
+            new {
+                0
+                0.6
+            }
+            new {
+                4
+                1.4
+            }
+            new {
+                5
+                2
+            }
+            new {
+                12
+                8
+            }
+        }
+    }
+}

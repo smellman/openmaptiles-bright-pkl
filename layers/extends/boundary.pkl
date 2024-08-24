@@ -1,0 +1,5 @@
+open module boundary
+extends "openmaptiles.pkl"
+
+`source-layer` = "boundary"
+type = "line"
