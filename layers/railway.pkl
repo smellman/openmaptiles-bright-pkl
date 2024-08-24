@@ -1,0 +1,46 @@
+extends "extends/transportation.pkl"
+
+id = "railway"
+filter {
+    "all"
+    new {
+        "=="
+        "$type"
+        "LineString"
+    }
+    new {
+        "!has"
+        "service"
+    }
+    new {
+        "!in"
+        "brunnel"
+        "bridge"
+        "tunnel"
+    }
+    new {
+        "=="
+        "class"
+        "rail"
+    }
+}
+paint {
+    `line-color` = "#bbb"
+    `line-width` {
+        base = 1.4
+        stops {
+            new {
+                14
+                0.4
+            }
+            new {
+                15
+                0.75
+            }
+            new {
+                20
+                2
+            }
+        }
+    }
+}

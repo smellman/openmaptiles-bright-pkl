@@ -1,0 +1,36 @@
+extends "extends/transportation.pkl"
+
+id = "railway-service"
+filter {
+    "all"
+    new {
+        "=="
+        "$type"
+        "LineString"
+    }
+    new {
+        "=="
+        "class"
+        "rail"
+    }
+    new {
+        "has"
+        "service"
+    }
+}
+paint {
+    `line-color` = "hsla(0, 0%, 73%, 0.77)"
+    `line-width` {
+        base = 1.4
+        stops {
+            new {
+                14
+                0.4
+            }
+            new {
+                20
+                1
+            }
+        }
+    }
+}

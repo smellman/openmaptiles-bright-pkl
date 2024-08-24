@@ -64,4 +64,10 @@ layers = new Listing {
     import("layers/highway-secondary-tertiary.pkl")
     import("layers/highway-primary.pkl")
     import("layers/highway-trunk.pkl")
+    import("layers/railway-transit.pkl")
+    import("layers/railway-transit-hatching.pkl")
+    import("layers/railway-service.pkl")
+    import("layers/railway-service-hatching.pkl")
+    import("layers/railway.pkl")
+    import("layers/railway-hatching.pkl")
 }
