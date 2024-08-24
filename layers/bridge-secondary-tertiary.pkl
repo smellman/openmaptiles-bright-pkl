@@ -1,0 +1,45 @@
+extends "extends/transportation.pkl"
+
+id = "bridge-secondary-tertiary"
+filter {
+    "all"
+    new {
+        "=="
+        "brunnel"
+        "bridge"
+    }
+    new {
+        "in"
+        "class"
+        "secondary"
+        "tertiary"
+    }
+    new {
+        "!="
+        "ramp"
+        1
+    }
+}
+layout {
+    `line-join` = "round"
+}
+paint {
+    `line-color` = "#fea"
+    `line-width` {
+        base = 1.2
+        stops {
+            new {
+                6.5
+                0
+            }
+            new {
+                8
+                0.5
+            }
+            new {
+                20
+                13
+            }
+        }
+    }
+}

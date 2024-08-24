@@ -1,0 +1,50 @@
+extends "extends/transportation.pkl"
+
+id = "bridge-secondary-tertiary-casing"
+filter {
+    "all"
+    new {
+        "=="
+        "brunnel"
+        "bridge"
+    }
+    new {
+        "in"
+        "class"
+        "secondary"
+        "tertiary"
+    }
+    new {
+        "!="
+        "ramp"
+        1
+    }
+}
+layout {
+    `line-join` = "round"
+}
+paint {
+    `line-color` = "#e9ac77"
+    `line-opacity` = 1
+    `line-width` {
+        base = 1.2
+        stops {
+            new {
+                5
+                0.4
+            }
+            new {
+                7
+                0.6
+            }
+            new {
+                8
+                1.5
+            }
+            new {
+                20
+                21
+            }
+        }
+    }
+}

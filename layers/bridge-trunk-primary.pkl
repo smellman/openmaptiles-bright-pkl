@@ -1,0 +1,45 @@
+extends "extends/transportation.pkl"
+
+id = "bridge-trunk-primary"
+filter {
+    "all"
+    new {
+        "=="
+        "brunnel"
+        "bridge"
+    }
+    new {
+        "in"
+        "class"
+        "trunk"
+        "primary"
+    }
+    new {
+        "!="
+        "ramp"
+        1
+    }
+}
+layout {
+    `line-join` = "round"
+}
+paint {
+    `line-color` = "#fea"
+    `line-width` {
+        base = 1.2
+        stops {
+            new {
+                6.5
+                0
+            }
+            new {
+                7
+                0.5
+            }
+            new {
+                20
+                18
+            }
+        }
+    }
+}

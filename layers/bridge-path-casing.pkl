@@ -1,0 +1,37 @@
+extends "extends/transportation.pkl"
+
+id = "bridge-path-casing"
+filter {
+    "all"
+    new {
+        "=="
+        "$type"
+        "LineString"
+    }
+    new {
+        "=="
+        "brunnel"
+        "bridge"
+    }
+    new {
+        "=="
+        "class"
+        "path"
+    }
+}
+paint {
+    `line-color` = "#cfcdca"
+    `line-width` {
+        base = 1.2
+        stops {
+            new {
+                15
+                1.2
+            }
+            new {
+                20
+                18
+            }
+        }
+    }
+}

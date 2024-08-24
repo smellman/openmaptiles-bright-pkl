@@ -1,0 +1,55 @@
+extends "extends/transportation.pkl"
+
+id = "bridge-path-steps"
+filter {
+    "all"
+    new {
+        "=="
+        "$type"
+        "LineString"
+    }
+    new {
+        "=="
+        "brunnel"
+        "bridge"
+    }
+    new {
+        "=="
+        "class"
+        "path"
+    }
+    new {
+        "=="
+        "surface"
+        "steps"
+    }
+}
+layout {
+    `line-join` = "round"
+    `line-cap` = "butt"
+}
+paint {
+    `line-color` = "#fff"
+    `line-opacity` = 1
+    `line-width` {
+        base = 1.2
+        stops {
+            new {
+                13.5
+                0
+            }
+            new {
+                14
+                1.25
+            }
+            new {
+                20
+                5.75
+            }
+        }
+    }
+    `line-dasharray` {
+        0.5
+        0.25
+    }
+}
