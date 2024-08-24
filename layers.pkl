@@ -87,4 +87,6 @@ layers = new Listing {
     import("layers/bridge-motorway.pkl")
     import("layers/bridge-railway.pkl")
     import("layers/bridge-railway-hatching.pkl")
+    import("layers/cablecar.pkl")
+    import("layers/cablecar-dash.pkl")
 }
