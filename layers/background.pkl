@@ -1,4 +1,4 @@
-import "variables.pkl" as variables
+import "../variables.pkl" as variables
 id = "background"
 type = "background"
 paint {
