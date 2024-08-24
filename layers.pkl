@@ -93,4 +93,5 @@ layers = new Listing {
     import("layers/boundary-land-level-2.pkl")
     import("layers/boundary-land-disputed.pkl")
     import("layers/boundary-water.pkl")
+    import("layers/waterway-name.pkl")
 }
