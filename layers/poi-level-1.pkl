@@ -1,0 +1,33 @@
+extends "poi-level-base.pkl"
+
+id = "poi-level-1"
+minzoom = 14
+filter {
+    "all"
+    new {
+        "=="
+        "$type"
+        "Point"
+    }
+    new {
+        "<="
+        "rank"
+        14
+    }
+    new {
+        "has"
+        "name"
+    }
+    new {
+        "any"
+        new {
+            "!has"
+            "level"
+        }
+        new {
+            "=="
+            "level"
+            0
+        }
+    }
+}

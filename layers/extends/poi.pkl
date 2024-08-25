@@ -1,0 +1,5 @@
+open module poi
+extends "openmaptiles.pkl"
+
+type = "symbol"
+`source-layer` = "poi"
