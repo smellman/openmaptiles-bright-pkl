@@ -7,6 +7,6 @@ filter {
     "grass"
 }
 paint {
-    `fill-color` = "#ff0000"
+    `fill-color` = "#d8e8c8"
     `fill-opacity` = 1
 }
