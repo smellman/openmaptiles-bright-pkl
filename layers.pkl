@@ -109,4 +109,5 @@ layers = new Listing {
     import("layers/highway-shield.pkl")
     import("layers/highway-shield-us-interstate.pkl")
     import("layers/highway-shield-us-other.pkl")
+    import("layers/airport-label-major.pkl")
 }

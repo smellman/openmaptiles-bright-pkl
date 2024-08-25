@@ -1,0 +1,5 @@
+open module `aerodrome-label`
+extends "openmaptiles.pkl"
+
+type = "symbol"
+`source-layer` = "aerodrome_label"
