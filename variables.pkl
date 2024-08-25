@@ -8,3 +8,6 @@ text_font_italic {
 text_font_regular {
     "Noto Sans Regular"
 }
+text_font_bold {
+    "Noto Sans Bold"
+}

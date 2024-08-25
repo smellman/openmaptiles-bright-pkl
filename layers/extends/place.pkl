@@ -1,0 +1,5 @@
+open module place
+extends "openmaptiles.pkl"
+
+type = "symbol"
+`source-layer` = "place"

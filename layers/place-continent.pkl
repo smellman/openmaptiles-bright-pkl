@@ -1,0 +1,24 @@
+extends "extends/place.pkl"
+import "../variables.pkl" as variables
+
+id = "place-continent"
+maxzoom = 1
+filter {
+    "=="
+    "class"
+    "continent"
+}
+layout {
+    `text-field` = variables.text_field_laten
+    `text-font` = variables.text_font_bold
+    `text-max-width` = 6.25
+    `text-size` = 14
+    `text-transform` = "uppercase"
+    visibility = "visible"
+}
+paint {
+    `text-color` = "#334"
+    `text-halo-blur` = 1
+    `text-halo-color` = "rgba(255,255,255,0.8)"
+    `text-halo-width` = 2
+}

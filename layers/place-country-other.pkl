@@ -1,0 +1,46 @@
+extends "extends/place.pkl"
+import "../variables.pkl" as variables
+
+id = "place-country-other"
+filter {
+    "all"
+    new {
+        "=="
+        "class"
+        "country"
+    }
+    new {
+        ">="
+        "rank"
+        3
+    }
+    new {
+        "!has"
+        "iso_a2"
+    }
+}
+layout {
+    `text-field` = variables.text_field_laten
+    `text-font` = variables.text_font_italic
+    `text-max-width` = 6.25
+    `text-size` {
+        stops {
+            new {
+                3
+                11
+            }
+            new {
+                7
+                17
+            }
+        }
+    }
+    `text-transform` = "uppercase"
+    visibility = "visible"
+}
+paint {
+    `text-color` = "#334"
+    `text-halo-blur` = 1
+    `text-halo-color` = "rgba(255,255,255,0.8)"
+    `text-halo-width` = 2
+}
