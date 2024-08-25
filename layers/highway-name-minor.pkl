@@ -1,0 +1,44 @@
+extends "extends/transportation-name.pkl"
+import "../variables.pkl" as variables
+
+id = "highway-name-minor"
+minzoom = 15
+filter {
+    "all"
+    new {
+        "=="
+        "$type"
+        "LineString"
+    }
+    new {
+        "in"
+        "class"
+        "minor"
+        "service"
+        "track"
+    }
+}
+layout {
+    `symbol-placement` = "line"
+    `text-field` = variables.text_field
+    `text-font` = variables.text_font_regular
+    `text-rotation-alignment` = "map"
+    `text-size` {
+        base = 1
+        stops {
+            new {
+                13
+                12
+            }
+            new {
+                14
+                13
+            }
+        }
+    }
+}
+paint {
+    `text-color` = "#765"
+    `text-halo-blur` = 0.5
+    `text-halo-width` = 1
+}

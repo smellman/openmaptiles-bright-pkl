@@ -1,0 +1,5 @@
+open module `transportation-name`
+extends "openmaptiles.pkl"
+
+type = "symbol"
+`source-layer` = "transportation_name"

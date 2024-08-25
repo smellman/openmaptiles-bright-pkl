@@ -1,0 +1,34 @@
+extends "extends/transportation-name.pkl"
+import "../variables.pkl" as variables
+
+id = "highway-name-path"
+minzoom = 15.5
+filter {
+    "=="
+    "class"
+    "path"
+}
+layout {
+    `symbol-placement` = "line"
+    `text-field` = variables.text_field
+    `text-font` = variables.text_font_regular
+    `text-rotation-alignment` = "map"
+    `text-size` {
+        base = 1
+        stops {
+            new {
+                13
+                12
+            }
+            new {
+                14
+                13
+            }
+        }
+    }
+}
+paint {
+    `text-color` = "hsl(30, 23%, 62%)"
+    `text-halo-color` = "#f8f4f0"
+    `text-halo-width` = 0.5
+}

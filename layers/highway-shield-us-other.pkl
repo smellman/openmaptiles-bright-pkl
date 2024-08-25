@@ -1,0 +1,50 @@
+extends "extends/transportation-name.pkl"
+import "../variables.pkl" as variables
+
+id = "highway-shield-us-other"
+minzoom = 9
+filter {
+    "all"
+    new {
+        "<="
+        "ref_length"
+        6
+    }
+    new {
+        "=="
+        "$type"
+        "LineString"
+    }
+    new {
+        "in"
+        "network"
+        "us-highway"
+        "us-state"
+    }
+}
+layout {
+    `icon-image` = "{network}_{ref_length}"
+    `icon-rotation-alignment` = "viewport"
+    `icon-size` = 1
+    `symbol-placement` {
+        base = 1
+        stops {
+            new {
+                10
+                "point"
+            }
+            new {
+                11
+                "line"
+            }
+        }
+    }
+    `symbol-spacing` = 200
+    `text-field` = "{ref}"
+    `text-font` = variables.text_font_regular
+    `text-rotation-alignment` = "viewport"
+    `text-size` = 10
+}
+paint {
+    `text-color` = "rgba(0, 0, 0, 1)"
+}

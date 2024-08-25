@@ -1,0 +1,53 @@
+extends "extends/transportation-name.pkl"
+import "../variables.pkl" as variables
+
+id = "highway-shield-us-interstate"
+minzoom = 7
+filter {
+    "all"
+    new {
+        "<="
+        "ref_length"
+        6
+    }
+    new {
+        "=="
+        "$type"
+        "LineString"
+    }
+    new {
+        "in"
+        "network"
+        "us-interstate"
+    }
+}
+layout {
+    `icon-image` = "{network}_{ref_length}"
+    `icon-rotation-alignment` = "viewport"
+    `icon-size` = 1
+    `symbol-placement` {
+        base = 1
+        stops {
+            new {
+                7
+                "point"
+            }
+            new {
+                7
+                "line"
+            }
+            new {
+                8
+                "line"
+            }
+        }
+    }
+    `symbol-spacing` = 200
+    `text-field` = "{ref}"
+    `text-font` = variables.text_font_regular
+    `text-rotation-alignment` = "viewport"
+    `text-size` = 10
+}
+paint {
+    `text-color` = "rgba(0, 0, 0, 1)"
+}

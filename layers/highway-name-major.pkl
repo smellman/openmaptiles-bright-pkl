@@ -1,0 +1,37 @@
+extends "extends/transportation-name.pkl"
+import "../variables.pkl" as variables
+
+id = "highway-name-major"
+minzoom = 12.2
+filter {
+    "in"
+    "class"
+    "primary"
+    "secondary"
+    "tertiary"
+    "trunk"
+}
+layout {
+    `symbol-placement` = "line"
+    `text-field` = variables.text_field
+    `text-font` = variables.text_font_regular
+    `text-rotation-alignment` = "map"
+    `text-size` {
+        base = 1
+        stops {
+            new {
+                13
+                12
+            }
+            new {
+                14
+                13
+            }
+        }
+    }
+}
+paint {
+    `text-color` = "#765"
+    `text-halo-blur` = 0.5
+    `text-halo-width` = 1
+}

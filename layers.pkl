@@ -103,4 +103,10 @@ layers = new Listing {
     import("layers/poi-level-2.pkl")
     import("layers/poi-level-1.pkl")
     import("layers/poi-railway.pkl")
+    import("layers/highway-name-path.pkl")
+    import("layers/highway-name-minor.pkl")
+    import("layers/highway-name-major.pkl")
+    import("layers/highway-shield.pkl")
+    import("layers/highway-shield-us-interstate.pkl")
+    import("layers/highway-shield-us-other.pkl")
 }
