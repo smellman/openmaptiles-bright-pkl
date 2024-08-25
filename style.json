@@ -4046,6 +4046,443 @@
         "text-halo-color": "rgba(255,255,255,0.7)",
         "text-halo-width": 1.5
       }
+    },
+    {
+      "source": "openmaptiles",
+      "type": "symbol",
+      "source-layer": "water_name",
+      "id": "water-name-lakeline",
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 350,
+        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-font": [
+          "Noto Sans Italic"
+        ],
+        "text-letter-spacing": 0.2,
+        "text-max-width": 5,
+        "text-rotation-alignment": "map",
+        "text-size": 14
+      },
+      "paint": {
+        "text-color": "#74aee9",
+        "text-halo-color": "rgba(255,255,255,0.7)",
+        "text-halo-width": 1.5
+      }
+    },
+    {
+      "source": "openmaptiles",
+      "type": "symbol",
+      "source-layer": "water_name",
+      "id": "water-name-ocean",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "==",
+          "class",
+          "ocean"
+        ]
+      ],
+      "layout": {
+        "symbol-placement": "point",
+        "symbol-spacing": 350,
+        "text-field": "{name:latin}",
+        "text-font": [
+          "Noto Sans Italic"
+        ],
+        "text-letter-spacing": 0.2,
+        "text-max-width": 5,
+        "text-rotation-alignment": "map",
+        "text-size": 14
+      },
+      "paint": {
+        "text-color": "#74aee9",
+        "text-halo-color": "rgba(255,255,255,0.7)",
+        "text-halo-width": 1.5
+      }
+    },
+    {
+      "source": "openmaptiles",
+      "type": "symbol",
+      "source-layer": "water_name",
+      "id": "water-name-other",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "!=",
+          "class",
+          "ocean"
+        ]
+      ],
+      "layout": {
+        "symbol-placement": "point",
+        "symbol-spacing": 350,
+        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-font": [
+          "Noto Sans Italic"
+        ],
+        "text-letter-spacing": 0.2,
+        "text-max-width": 5,
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              10
+            ],
+            [
+              6,
+              14
+            ]
+          ]
+        },
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "#74aee9",
+        "text-halo-color": "rgba(255,255,255,0.7)",
+        "text-halo-width": 1.5
+      }
+    },
+    {
+      "source": "openmaptiles",
+      "type": "symbol",
+      "source-layer": "transportation",
+      "id": "road-oneway",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        [
+          "==",
+          "onewey",
+          1
+        ],
+        [
+          "in",
+          "class",
+          "moterway",
+          "trunk",
+          "primary",
+          "secondary",
+          "tertiary",
+          "minor",
+          "service"
+        ]
+      ],
+      "layout": {
+        "icon-image": "oneway",
+        "icon-padding": 2,
+        "icon-rotate": 90,
+        "icon-rotation-alignment": "map",
+        "icon-size": {
+          "stops": [
+            [
+              15,
+              0.5
+            ],
+            [
+              19,
+              1
+            ]
+          ]
+        },
+        "symbol-placement": "line",
+        "symbol-spacing": 75
+      },
+      "paint": {
+        "icon-opacity": 0.5
+      }
+    },
+    {
+      "source": "openmaptiles",
+      "type": "symbol",
+      "source-layer": "transportation",
+      "id": "road-oneway-opposite",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        [
+          "==",
+          "oneway",
+          -1
+        ],
+        [
+          "in",
+          "class",
+          "moterway",
+          "trunk",
+          "primary",
+          "secondary",
+          "tertiary",
+          "minor",
+          "service"
+        ]
+      ],
+      "layout": {
+        "icon-image": "oneway",
+        "icon-padding": 2,
+        "icon-rotate": -90,
+        "icon-rotation-alignment": "map",
+        "icon-size": {
+          "stops": [
+            [
+              15,
+              0.5
+            ],
+            [
+              19,
+              1
+            ]
+          ]
+        },
+        "symbol-placement": "line",
+        "symbol-spacing": 75
+      },
+      "paint": {
+        "icon-opacity": 0.5
+      }
+    },
+    {
+      "source": "openmaptiles",
+      "type": "symbol",
+      "source-layer": "poi",
+      "layout": {
+        "icon-image": "{class}_11",
+        "text-anchor": "top",
+        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-max-width": 9,
+        "text-offset": [
+          0,
+          0.6
+        ],
+        "text-padding": 2,
+        "text-size": 12,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      },
+      "id": "poi-level-3",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          ">=",
+          "rank",
+          25
+        ],
+        [
+          "any",
+          [
+            "!has",
+            "level"
+          ],
+          [
+            "==",
+            "level",
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "source": "openmaptiles",
+      "type": "symbol",
+      "source-layer": "poi",
+      "layout": {
+        "icon-image": "{class}_11",
+        "text-anchor": "top",
+        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-max-width": 9,
+        "text-offset": [
+          0,
+          0.6
+        ],
+        "text-padding": 2,
+        "text-size": 12,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      },
+      "id": "poi-level-2",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "<=",
+          "rank",
+          24
+        ],
+        [
+          ">=",
+          "rank",
+          15
+        ],
+        [
+          "any",
+          [
+            "!has",
+            "level"
+          ],
+          [
+            "==",
+            "level",
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "source": "openmaptiles",
+      "type": "symbol",
+      "source-layer": "poi",
+      "layout": {
+        "icon-image": "{class}_11",
+        "text-anchor": "top",
+        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-max-width": 9,
+        "text-offset": [
+          0,
+          0.6
+        ],
+        "text-padding": 2,
+        "text-size": 12,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      },
+      "id": "poi-level-1",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "<=",
+          "rank",
+          14
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "any",
+          [
+            "!has",
+            "level"
+          ],
+          [
+            "==",
+            "level",
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "source": "openmaptiles",
+      "type": "symbol",
+      "source-layer": "poi",
+      "id": "poi-railway",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "==",
+          "class",
+          "railway"
+        ],
+        [
+          "==",
+          "subclass",
+          "station"
+        ]
+      ],
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-ignore-placement": false,
+        "icon-image": "{class}_11",
+        "icon-optional": false,
+        "text-allow-overlap": false,
+        "text-anchor": "top",
+        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-ignore-placement": false,
+        "text-max-width": 9,
+        "text-offset": [
+          0,
+          0.6
+        ],
+        "text-optional": true,
+        "text-padding": 2,
+        "text-size": 12
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      }
     }
   ]
 }
