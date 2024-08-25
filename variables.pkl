@@ -1,5 +1,7 @@
 background_color = "#f8f4f0"
 text_field = "{name:latin} {name:nonlatin}"
+text_field_laten = "{name:latin}"
+text_field_with_return = "{name:latin}\n{name:nonlatin}"
 text_font {
     "Noto Sans Italic"
 }

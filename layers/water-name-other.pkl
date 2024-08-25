@@ -1,0 +1,44 @@
+extends "extends/water-name.pkl"
+import "../variables.pkl" as variables
+
+id = "water-name-other"
+filter {
+    "all"
+    new {
+        "=="
+        "$type"
+        "Point"
+    }
+    new {
+        "!="
+        "class"
+        "ocean"
+    }
+}
+layout {
+    `symbol-placement` = "point"
+    `symbol-spacing` = 350
+    `text-field` = variables.text_field_with_return
+    `text-font` = variables.text_font
+    `text-letter-spacing` = 0.2
+    `text-max-width` = 5
+    `text-rotation-alignment` = "map"
+    `text-size` {
+        stops {
+            new {
+                0
+                10
+            }
+            new {
+                6
+                14
+            }
+        }
+    }
+    visibility = "visible"
+}
+paint {
+    `text-color` = "#74aee9"
+    `text-halo-color` = "rgba(255,255,255,0.7)"
+    `text-halo-width` = 1.5
+}

@@ -1,0 +1,5 @@
+open module `water-name`
+extends "openmaptiles.pkl"
+
+type = "symbol"
+`source-layer` = "water_name"
