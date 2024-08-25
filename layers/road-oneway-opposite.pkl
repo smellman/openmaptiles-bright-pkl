@@ -1,0 +1,13 @@
+extends "road-oneway.pkl"
+
+id = "road-oneway-opposite"
+filter {
+    [1] = new {
+        "=="
+        "oneway"
+        -1
+    }
+}
+layout {
+    `icon-rotate` = -90
+}
