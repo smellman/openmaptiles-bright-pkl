@@ -1,5 +1,5 @@
 extends "extends/transportation-name.pkl"
-import "../variables.pkl" as variables
+import "../variables.pkl" as v
 
 id = "highway-shield-us-interstate"
 minzoom = 7
@@ -44,7 +44,7 @@ layout {
     }
     `symbol-spacing` = 200
     `text-field` = "{ref}"
-    `text-font` = variables.text_font_regular
+    `text-font` = v.text_font_regular
     `text-rotation-alignment` = "viewport"
     `text-size` = 10
 }

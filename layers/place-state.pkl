@@ -1,5 +1,5 @@
 extends "extends/place.pkl"
-import "../variables.pkl" as variables
+import "../variables.pkl" as v
 
 id = "place-state"
 filter {
@@ -8,8 +8,8 @@ filter {
     "state"
 }
 layout {
-    `text-field` = variables.text_field_with_return
-    `text-font` = variables.text_font_bold
+    `text-field` = v.text_field_with_return
+    `text-font` = v.text_font_bold
     `text-letter-spacing` = 0.1
     `text-max-width` = 9
     `text-size` {

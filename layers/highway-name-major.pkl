@@ -1,5 +1,5 @@
 extends "extends/transportation-name.pkl"
-import "../variables.pkl" as variables
+import "../variables.pkl" as v
 
 id = "highway-name-major"
 minzoom = 12.2
@@ -13,8 +13,8 @@ filter {
 }
 layout {
     `symbol-placement` = "line"
-    `text-field` = variables.text_field
-    `text-font` = variables.text_font_regular
+    `text-field` = v.text_field
+    `text-font` = v.text_font_regular
     `text-rotation-alignment` = "map"
     `text-size` {
         base = 1

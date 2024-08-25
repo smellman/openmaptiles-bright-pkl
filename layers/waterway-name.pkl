@@ -1,5 +1,5 @@
 extends "extends/waterway.pkl"
-import "../variables.pkl" as variables
+import "../variables.pkl" as v
 
 id = "waterway-name"
 type = "symbol"
@@ -19,8 +19,8 @@ filter {
 layout {
     `symbol-placement` = "line"
     `symbol-spacing` = 350
-    `text-field` = variables.text_field
-    `text-font` = variables.text_font_italic
+    `text-field` = v.text_field
+    `text-font` = v.text_font_italic
     `text-letter-spacing` = 0.2
     `text-max-width` = 5
     `text-rotation-alignment` = "map"

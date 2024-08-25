@@ -1,5 +1,5 @@
 extends "extends/water-name.pkl"
-import "../variables.pkl" as variables
+import "../variables.pkl" as v
 
 id = "water-name-ocean"
 filter {
@@ -18,8 +18,8 @@ filter {
 layout {
     `symbol-placement` = "point"
     `symbol-spacing` = 350
-    `text-field` = variables.text_field_laten
-    `text-font` = variables.text_font_italic
+    `text-field` = v.text_field_laten
+    `text-font` = v.text_font_italic
     `text-letter-spacing` = 0.2
     `text-max-width` = 5
     `text-rotation-alignment` = "map"

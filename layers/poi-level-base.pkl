@@ -1,12 +1,12 @@
 open module `poi-level-base`
 extends "extends/poi.pkl"
-import "../variables.pkl" as variables
+import "../variables.pkl" as v
 
 layout {
     `icon-image` = "{class}_11"
     `text-anchor` = "top"
-    `text-field` = variables.text_field_with_return
-    `text-font` = variables.text_font_regular
+    `text-field` = v.text_field_with_return
+    `text-font` = v.text_font_regular
     `text-max-width` = 9
     `text-offset` {
         0
